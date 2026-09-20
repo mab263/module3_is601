@@ -1,7 +1,17 @@
+"""Command-line REPL interface for the calculator application."""
+
 from app.calculator import calculate
 
+
 def get_number(prompt: str) -> float:
-    """Prompt the user for a number, re-prompting on invalid input."""
+    """Prompt the user for a number, re-prompting on invalid input.
+
+    Args:
+        prompt: The message to display to the user.
+
+    Returns:
+        The number entered by the user, as a float.
+    """
     while True:
         value = input(prompt)
         try:
@@ -9,7 +19,9 @@ def get_number(prompt: str) -> float:
         except ValueError:
             print(f"Invalid number: '{value}'. Please enter a numeric value.")
 
+
 def repl():
+    """Run the calculator's Read-Eval-Print Loop until the user exits."""
     print("Welcome to the Calculator REPL!")
     print("Available operations: add, subtract, multiply, divide")
     print("Type 'exit' at any prompt to quit.\n")
@@ -33,6 +45,7 @@ def repl():
             print(f"Result: {result}\n")
         except ValueError as e:
             print(f"Error: {e}\n")
+
 
 if __name__ == "__main__":
     repl()
