@@ -196,7 +196,7 @@ docker run -it --rm <image-name>
 
 ---
 
-# 🚀 6. Running the Project
+# 🚀 6.Usuage/ Running the Project
 
 - **Without Docker**:
 
@@ -211,6 +211,22 @@ python main.py
 ```bash
 docker run -it --rm <image-name>
 ```
+
+## Usage
+
+Run the calculator:
+```bash
+python main.py
+```
+
+Example session:
+Enter operation (add, subtract, multiply, divide) or 'exit': add
+Enter the first number: 5
+Enter the second number: 3
+Result: 8.0
+
+
+Type `exit` at any operation prompt to quit.
 
 ---
 
